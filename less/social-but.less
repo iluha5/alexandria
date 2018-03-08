@@ -1,0 +1,45 @@
+.social-but{
+    position: relative;
+
+    display: inline-block;
+    width:38px;
+    height:38px;
+
+    border-radius: 38px;
+    border: 0;
+
+    text-align: center;
+    font-size:0;
+
+    background-color: @blue;
+    color: @white;
+}
+.social-but:nth-child(1){
+    margin-right:19px;
+}
+.social-but--fb::after{
+    position: absolute;
+    top:9px;
+    left:14px;
+    width:10px;
+    height:20px;
+    background: @blue url(/img/sprites_all.png) 0 -218px no-repeat;
+
+    content: '';
+}
+.social-but--vk::after{
+    position: absolute;
+    top:13px;
+    left:8px;
+    width:22px;
+    height:14px;
+    background: @blue url(/img/sprites_all.png) 0 -203px no-repeat;
+
+    content: '';
+}
+
+@media @small-mobile-size {
+    .social-but:nth-child(1){
+        margin-right:5px;
+    }
+}
