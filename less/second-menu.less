@@ -1,0 +1,149 @@
+.second-menu{
+    //.outline(red);
+
+    font-size:0;
+    @media @desktop-size{
+        width: 100%;
+        border-bottom: 1px solid @lite-gray;
+    }
+}
+.second-menu .container-full{
+    @media @desktop-size {
+        width: 92%;
+        max-width: 1170px;
+    }
+}
+.second-menu ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+
+}
+.second-menu li{
+    position: relative;
+
+    display: inline-block;
+    vertical-align: top;
+    width:50%;
+    //min-width:185px;
+    box-sizing: border-box;
+
+
+    border-bottom: 1px solid @lite-gray;
+
+    &:nth-child(even){
+        border-left: 1px solid @lite-gray;
+    }
+    @media @desktop-size{
+        width: 25%;
+        border-bottom: 0;
+        &:nth-child(3){
+            border-left: 1px solid @lite-gray;
+        }
+
+    }
+
+}
+.second-menu li a{
+    position: relative;
+
+    display: block;
+    width:80%;
+    height:93px;
+    padding-left:20%;
+    //padding-top:28px;
+
+    font-size:18px;
+    font-family:"Geometria Medium", Arial, sans-serif;
+    color: @black;
+    text-decoration: none;
+    line-height:93px;
+
+
+    &:hover{
+        text-decoration: underline;
+    }
+    //@media @mobile-size320{
+    //    width:80%;
+    //    padding-left:20%;
+    //    font-size: 16px;
+    //}
+    @media @mobile-size480{
+        width:70%;
+        padding-left:30%;
+        font-size: 18px;
+    }
+    @media @tablet-size{
+        width:60%;
+        padding-left:40%;
+
+        text-align: left;
+    }
+
+
+}
+
+.second-menu a span {
+    position: relative;
+
+    display: inline-block;
+    line-height: 20px;
+
+    vertical-align: middle;
+
+
+
+}
+
+.second-menu--watch span::before{
+    @media @mobile-size480 {
+        position: absolute;
+        left: -60px;
+        top: -10px;
+
+        width: 45px;
+        height: 53px;
+
+        background: transparent url(/img/sprites_all.png) 0 -150px no-repeat;
+        content: '';
+    }
+}
+.second-menu--card span::before{
+    @media @mobile-size480 {
+        position: absolute;
+        left: -62px;
+        top: -10px;
+
+        width: 42px;
+        height: 52px;
+
+        background: transparent url(/img/sprites_all.png) 0 -98px no-repeat;
+        content: '';
+    }
+}
+.second-menu--build span::before{
+    @media @mobile-size480 {
+        position: absolute;
+        left: -60px;
+        top: -15px;
+
+        width: 44px;
+        height: 48px;
+
+        background: transparent url(/img/sprites_all.png) 0 -49px no-repeat;
+        content: '';
+    }
+}
+.second-menu--pig span::before{
+    @media @mobile-size480 {
+        position: absolute;
+        left: -65px;
+        top: -18px;
+
+        width: 50px;
+        height: 48px;
+
+        background: transparent url(/img/sprites_all.png) 0 0px no-repeat;
+        content: '';
+    }
+}
