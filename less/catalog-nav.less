@@ -1,0 +1,134 @@
+.catalog-nav{
+
+}
+.catalog-nav ul{
+    margin:0;
+    padding:0;
+
+    list-style: none;
+    text-align: center;
+    //.outline(red);
+}
+.catalog-nav li{
+    display: block;
+    padding-top:35px;
+
+    vertical-align: top;
+    text-align: center;
+
+    //.outline(red);
+
+    @media @tablet-size{
+        display: inline-block;
+        width: 40%;
+
+        font-size: 0;
+
+        &:nth-child(even){
+            text-align: left;
+            padding-left: 5%;
+        }
+        &:nth-child(odd){
+            text-align: right;
+            padding-right: 5%;
+        }
+    }
+
+}
+
+@media @desktop-size {
+    .catalog-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .catalog-nav li{
+        padding:0;
+        padding-top:35px;
+        width:auto;
+        &:nth-child(even){
+            text-align: left;
+            padding-left: 0%;
+        }
+        &:nth-child(odd){
+            text-align: right;
+            padding-right: 0%;
+        }
+    }
+}
+
+.catalog-nav li a{
+    display: inline-block;
+    width:266px;
+    height:305px;
+
+    line-height: 305px;
+    color: @white;
+    font-family:"Geometria Regular", Arial, sans-serif;
+    text-align: center;
+
+
+    background: @white url(/img/catalog-nav__room.jpg) 0 0 no-repeat;
+    box-shadow: inset 0px -157px 211px -23px rgba(0,0,0,0.75);
+}
+.catalog-nav__info{
+    display: inline-block;
+    width:100%;
+    padding-bottom:38px;
+
+    line-height: 35px;
+    vertical-align: bottom;
+
+}
+
+.catalog-nav__caption{
+    display: block;
+
+    line-height:26px;
+    font-size:24px;
+}
+.catalog-nav__from{
+    display: block;
+    padding-top: 9px;
+    padding-right: 30px;
+
+    font-size: 18px;
+
+}
+.catalog-nav__price{
+    position: relative;
+    padding-left:5px;
+
+    font-size: 30px;
+    &::before{
+        position: absolute;
+        right:-40px;
+        bottom:5px;
+
+        width:26px;
+        height:26px;
+
+        border-radius: 26px;
+        border: 0;
+
+        font-size:16px;
+
+        background-color: @blue;
+        color: @white;
+
+        content: '';
+    }
+    &::after{
+        position: absolute;
+        right:-32px;
+        bottom:11px;
+
+        width:10px;
+        height:15px;
+        background: transparent url(/img/sprites_all.png) 0 -238px no-repeat;
+
+        content: '';
+    }
+
+}
