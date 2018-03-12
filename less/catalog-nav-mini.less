@@ -1,0 +1,139 @@
+.catalog-nav-mini{
+    position: relative;
+    width:100%;
+
+    margin:0 auto;
+}
+.catalog-nav-mini::before{
+    position: absolute;
+    left:0;
+
+    height:100%;
+    width:6%;
+
+    z-index: 49;
+    background: #fff;
+
+    content: '';
+}
+.catalog-nav-mini__slider{
+    position: inherit;
+}
+.catalog-nav-mini__slider::before{
+    position: absolute;
+    z-index: 59;
+    top:27px;
+    left: 15px;
+
+    width:39px;
+    height:39px;
+    border-left: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+
+    content: "";
+
+    transform: rotate(315deg);
+    @media @desktop-size{
+        display: none;
+    }
+}
+.catalog-nav-mini__slider::after{
+    position: absolute;
+    z-index: 59;
+    top:27px;
+    right: 16px;
+    width:39px;
+    height:39px;
+
+    border-left: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+    content: "";
+
+    transform: rotate(135deg);
+    @media @desktop-size{
+        display: none;
+    }
+
+}
+.catalog-nav-mini > .container-full{
+    width: 90%;
+}
+.catalog-nav-mini__card{
+    width:30%;
+    height:90px;
+    padding-top:10px;
+
+    overflow: hidden;
+
+    border-left: 1px solid @gray2;
+}
+.catalog-nav-mini__card {
+    outline: 0;
+}
+.catalog-nav-mini__card a{
+
+}
+.catalog-nav-mini__caption{
+    display: block;
+    padding-left:10%;
+    padding-right:10%;
+
+    text-align: left;
+    font-family:"Geometria Medium", Arial, sans-serif;
+    font-size:16px;
+    line-height:normal;
+
+    color: @black;
+
+    //@media @mobile-size480max{
+    //    font-size: 13px;
+    //    text-align: right;
+    //}
+}
+.catalog-nav-mini__from{
+    display: block;
+    padding-left:10%;
+    padding-right:10%;
+
+    text-align: left;
+    font-family:"Geometria Regular", Arial, sans-serif;
+    font-size:14px;
+    line-height:normal;
+
+    color: @lite-gray2;
+
+    //@media @mobile-size480max{
+    //    font-size: 11px;
+    //    text-align: right;
+    //}
+
+}
+.catalog-nav-mini a{
+    text-decoration: none;
+}
+.catalog-nav-mini .slick-arrow{
+    position: absolute;
+    top:0;
+
+    width:36px;
+    border:0;
+
+    background: transparent;
+    font-size:0;
+
+    //.outline(red);
+    height:100%;
+    z-index: 99;
+
+}
+.catalog-nav-mini .slick-arrow:focus {
+    border:0;
+    outline:0;
+}
+.catalog-nav-mini .slick-prev{
+    left:0;
+}
+
+.catalog-nav-mini .slick-next{
+    right:0;
+}
