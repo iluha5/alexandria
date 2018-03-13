@@ -1,0 +1,144 @@
+.sort{
+    padding-left:4%;
+    padding-top:27px;
+    border-bottom: 4px solid @blue;
+
+    font-size:0;
+    text-align: left;
+
+    background: @lite-gray3;
+
+    color: @black;
+    @media @tablet-size{
+        padding-left: 0;
+    }
+}
+.sort__by{
+    display: inline-block;
+    width:39%;
+    //.outline(green);
+
+    vertical-align: top;
+
+    font-family:"Geometria Medium", Arial, sans-serif;
+    font-size:16px;
+
+    color: @black;
+
+    @media @tablet-size{
+        width: 29%;
+    }
+    @media @desktop-size{
+        display: none;
+    }
+}
+
+.sort__categories{
+    display: inline-block;
+    width:61%;
+    margin:0;
+    padding:0;
+    //.outline(green);
+
+    vertical-align: top;
+    list-style: none;
+
+    @media @tablet-size{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        width: 60%;
+    }
+    @media @desktop-size{
+        width: 96%;
+        justify-content: flex-start;
+    }
+    @media @mobile-size480max{
+        width: 60%;
+    }
+
+
+}
+.sort__categories li{
+    display: inline-block;
+    line-height:50px;
+    vertical-align: top;
+    width:49%;
+    @media @tablet-size{
+        width: auto;
+    }
+    @media @mobile-size480max{
+        display: block;
+    }
+}
+.sort__categories span{
+    position: relative;
+
+    display: inline-block;
+
+    font-family:"Geometria Medium", Arial, sans-serif;
+    font-size:16px;
+    vertical-align: top;
+    line-height:normal;
+
+    cursor: pointer;
+
+    //.outline(blue);
+
+    color: @blue;
+
+    &::after{
+        position: absolute;
+        right:-18px;
+        top:10px;
+
+        width:9px;
+        height:9px;
+        border-left: 1px solid @blue;
+        border-top: 1px solid @blue;
+        transform: rotate(45deg);
+        content: '';
+    }
+
+    //@media @mobile-size480max{
+    //    font-size: 12px;
+    //}
+}
+.sort__categories span.sort--arrow-down{
+    &::after{
+        position: absolute;
+        right:-18px;
+        top:4px;
+        z-index: 99;
+
+        width:9px;
+        height:9px;
+        border-left: 1px solid @blue;
+        border-top: 1px solid @blue;
+        transform: rotate(225deg);
+        content: '';
+    }
+}
+.sort__categories li.sort__object{
+    @media @desktop-size{
+        width: 20%;
+    }
+}
+.sort__categories li.sort__adress{
+    @media @desktop-size {
+        width: 45%;
+    }
+}
+.sort__categories li.sort__deal{
+    @media @desktop-size{
+        width: 14%;
+    }
+}
+.sort__categories li.sort__price{
+    @media @desktop-size{
+        width: 10%;
+    }
+}
+

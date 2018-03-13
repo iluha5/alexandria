@@ -1,0 +1,125 @@
+.offers{
+    font-size:0;
+
+    color: @black;
+}
+.offers__item{
+    &:nth-child(even){
+        background: @white-footer;
+    }
+}
+.offers__item ul{
+    margin:0;
+    padding-right:0;
+    padding-left:4%;
+    padding-top:28px;
+    padding-bottom:27px;
+
+    list-style: none;
+
+    @media @tablet-size{
+        width: 92%;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding-left: 0;
+        //.outline(red);
+    }
+    @media @desktop-size{
+        padding: 0;
+    }
+
+}
+.offers__item li{
+    display: block;
+    font-size:0;
+    line-height:50px;
+    text-align: left;
+    vertical-align: top;
+
+    @media @desktop-size{
+        display: inline-block;
+        line-height: normal;
+        padding-top: 25px;
+        padding-bottom: 15px;
+        //.outline(green);
+    }
+}
+.offers__col1{
+    display: inline-block;
+    vertical-align: top;
+    width:39%;
+
+    font-family:"Geometria Medium",Arial,sans-serif;
+    font-size:16px;
+    line-height:normal;
+
+    color: @black;
+
+    @media @desktop-size{
+        display: none;
+    }
+}
+.offers__col2{
+    display: inline-block;
+    vertical-align: top;
+    width:61%;
+
+    font-family:"Geometria Regular",Arial,sans-serif;
+    font-size:16px;
+    line-height:normal;
+
+    color: @black;
+
+    @media @desktop-size{
+        width: 100%;
+        //vertical-align: middle;
+    }
+}
+.offers__more{
+    padding:0 20px;
+    width:auto;
+}
+.offers__type-value{
+    @media @desktop-size{
+        width: 19%;
+    }
+}
+.offers__adress-value{
+    @media @desktop-size{
+        width: 44%;
+    }
+
+}
+.offers__dial-value{
+    @media @desktop-size{
+        width: 13%;
+    }
+
+}
+.offers__price-value{
+    @media @desktop-size{
+        width: 12%;
+    }
+
+}
+.offers__item li.offers__but-more{
+    @media @desktop-size{
+        width: 12%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        //.outline(red);
+    }
+
+}
+.offers__map-link{
+    display: none;
+
+    font-family:"Geometria Regular",Arial,sans-serif;
+    font-size:14px;
+    text-decoration: underline;
+
+    color: @gray3;
+    @media @desktop-size{
+        display: block;
+    }
+}

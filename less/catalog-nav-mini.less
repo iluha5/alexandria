@@ -59,13 +59,28 @@
     width: 90%;
 }
 .catalog-nav-mini__card{
+    position: relative;
     width:30%;
     height:90px;
     padding-top:10px;
 
-    overflow: hidden;
+    //overflow: hidden;
 
     border-left: 1px solid @gray2;
+}
+.catalog-nav-mini--active-block::before{
+    position: absolute;
+    left:-1px;
+    top:0;
+
+    display: block;
+    z-index:69;
+    //width:100%;
+    width: calc(100% + 1px);
+    height:5px;
+    background: @blue;
+
+    content: '';
 }
 .catalog-nav-mini__card {
     outline: 0;
