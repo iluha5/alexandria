@@ -7,6 +7,7 @@
 *.sublime*
 css/*.css
 source/
+"на отправку"/
 node_modules/
 npm-debug.*
 Thumbs.db
