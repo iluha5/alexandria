@@ -50,7 +50,7 @@
     display: block;
     width:80%;
     height:93px;
-    padding-left:20%;
+    padding-left:15%;
     //padding-top:28px;
 
     font-size:18px;
@@ -66,17 +66,30 @@
 
     @media @mobile-size480{
         width:70%;
+        height: 93px;
         padding-left:30%;
+
+        line-height: 93px;
         font-size: 18px;
     }
     @media @tablet-size{
         width:60%;
+        height: 104px;
         padding-left:40%;
 
+        line-height: 104px;
         text-align: left;
+    }
+    @media @desktop-size{
+        height: 117px;
+
+        line-height: 117px;
     }
 
 
+}
+.second-menu li a:hover span{
+    text-decoration: underline;
 }
 
 .second-menu a span {

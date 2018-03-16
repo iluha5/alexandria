@@ -1,6 +1,13 @@
 .main-footer{
     height:327px;
     background: @black;
+
+    @media @tablet-size{
+        height: 303px;
+    }
+    @media @desktop-size{
+        height: 174px;
+    }
 }
 .main-footer .container{
     display: flex;
@@ -9,6 +16,9 @@
     align-items: stretch;
 
     height:100%;
+    @media @tablet-size{
+        //padding: 0 0%;
+    }
 
     @media @desktop-size{
         flex-direction: row;
@@ -27,20 +37,25 @@
 }
 .main-footer__logo{
     order:0;
-    padding-top:34px;
+    padding-top:37px;
 
     text-align: center;
     @media @tablet-size{
         padding-top: 43px;
+        padding-left: 4%;
     }
     @media @desktop-size{
-        width: 18%;
+        padding-top: 37px;
+        padding-left: 0;
+                width: 18%;
+        text-align: left;
+        //.outline(red);
     }
 }
 .main-footer__menu{
     order:2;
     padding-top:34px;
-    padding-left:10%;
+    padding-left:15%;
 
     text-align: left;
 
@@ -48,10 +63,11 @@
         order:1;
 
         padding-top:43px;
-        padding-left: 8%;
+        padding-left: 10%;
     }
     @media @desktop-size{
-        width: 24%;
+        width: 35%;
+        padding-left: 0;
 
         //.outline(red);
     }
@@ -59,9 +75,10 @@
 }
 .main-footer__phone-but-soc{
     order:1;
-    padding-top:18px;
+    padding-top:11px;
 
     text-align: center;
+
 
     @media @tablet-size{
         order:2;
@@ -69,9 +86,10 @@
         padding-top: 43px;
 
         text-align: right;
+
     }
     @media @desktop-size{
-        width: 50%;
+        width: 47%;
         padding-right: 0%;
 
         & > div{
@@ -86,14 +104,39 @@
 
 }
 .main-footer__phone{
+    font-family:"Geometria Bold",Arial,sans-serif;
+    font-size:24px;
+    @media @tablet-size{
+        font-size: 30px;
+    }
+    @media @desktop-size{
+        padding-right: 15px;
+
+        font-size: 30px;
+        line-height: 30px;
+        vertical-align: top;
+    }
     //padding-top:20px;
     //.outline(blue);
 }
+.main-footer__phone span{
+    @media @desktop-size{
+        vertical-align: middle;
+        line-height: 24px;
+        font-size: 24px;
+    }
+}
 .main-footer__request{
-    padding-top:20px;
+    padding-top:17px;
+
+
+    @media @desktop-size{
+        padding-right: 15px;
+    }
 }
 .main-footer__social{
     padding-top:20px;
+
 }
 
 

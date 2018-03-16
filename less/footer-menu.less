@@ -6,6 +6,8 @@
     //padding-left: 70px;
 
     text-align: left;
+    font-family:"Geometria Regular",Arial,sans-serif;
+    font-size:16px;
     //.outline(red);
 }
 .footer-menu ul{
@@ -15,10 +17,37 @@
 }
 .footer-menu li{
     display: block;
-    padding-bottom:22px;
+    padding-bottom:19px;
 
     @media @desktop-size{
         display: inline-block;
+        padding-right: 7%;
+        padding-bottom: 17px;
+
         vertical-align: top;
+
     }
+
+}
+.footer-menu li a{
+    padding-bottom:2px;
+
+    text-decoration: none;
+
+    color: @white-footer;
+
+    &:hover{
+        border-bottom: 2px solid @blue;
+    }
+    @media @tablet-size{
+        color: #a3a3a3;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+.footer-menu li a.footer-menu--active{
+    border-bottom: 2px solid @blue;
+    color: #fff;
+
 }

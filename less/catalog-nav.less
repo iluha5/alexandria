@@ -1,5 +1,14 @@
 .catalog-nav{
     padding-bottom:96px;
+    @media @desktop-size{
+        padding-top: 28px;
+    }
+}
+.catalog-nav > .container{
+    @media @desktop-size {
+        width: 95%;
+        max-width: 1170px;
+    }
 }
 .catalog-nav ul{
     margin:0;
@@ -68,10 +77,37 @@
     font-family:"Geometria Regular", Arial, sans-serif;
     text-align: center;
 
-
-    background: @white url(../img/catalog-nav__room.jpg) 0 0 no-repeat;
     box-shadow: inset 0px -157px 211px -23px rgba(0,0,0,0.75);
+    &:hover{
+        box-shadow: inset 0px -157px 211px -23px rgba(0,0,0,0);
+        transition: all 0.2s;
+    }
 }
+.catalog-nav--room{
+    background: @white url(../img/catalog-nav__sprite.jpg) 0 0 no-repeat;
+}
+.catalog-nav--1room-flat{
+    background: @white url(../img/catalog-nav__sprite.jpg) -267px 0 no-repeat;
+}
+.catalog-nav--2room-flat{
+    background: @white url(../img/catalog-nav__sprite.jpg) -536px 0 no-repeat;
+}
+.catalog-nav--3room-flat{
+    background: @white url(../img/catalog-nav__sprite.jpg) -804px 0 no-repeat;
+}
+.catalog-nav--multiroom-flat{
+    background: @white url(../img/catalog-nav__sprite.jpg) 0 -306px no-repeat;
+}
+.catalog-nav--ground{
+    background: @white url(../img/catalog-nav__sprite.jpg) -267px -306px no-repeat;
+}
+.catalog-nav--house{
+    background: @white url(../img/catalog-nav__sprite.jpg) -536px -306px no-repeat;
+}
+.catalog-nav--commercial{
+    background: @white url(../img/catalog-nav__sprite.jpg) -804px -306px no-repeat;
+}
+
 .catalog-nav__info{
     display: inline-block;
     width:100%;
@@ -101,27 +137,37 @@
     padding-left:5px;
 
     font-size: 30px;
+
     &::before{
         position: absolute;
+
+        display: inline-block;
+        //margin:0;
         right:-40px;
         bottom:5px;
 
+        //padding:0 5px 5px 0;
+        //padding:0;
         width:26px;
         height:26px;
-        //padding-bottom:5px;
-        vertical-align: top;
-        line-height:22px;
+
         border-radius: 26px;
         border: 0;
 
         font-size:20px;
+        line-height:22px;
+        vertical-align: top;
         font-family:"ALS Rubl",Arial,sans-serif;
 
-        background-color: @blue;
+        //background: @blue url("../img/rub.svg") no-repeat center;
+        background: @blue url(../img/rub.svg) 8px 5px no-repeat;
+        background-size: 12px auto;
         color: @white;
 
-        content: 'i';
+        content: '';
+
     }
+
     //-&::after{
     //    position: absolute;
     //    right:-32px;
