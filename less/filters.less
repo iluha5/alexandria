@@ -22,10 +22,15 @@
 
     @media @tablet-size {
         padding-left: 0;
+        width: 83%;
+        margin: 0 auto;
 
     }
     @media @desktop-size {
         padding-left: 0;
+        width: 92%;
+        max-width: 1170px;
+        margin: 0 auto;
 
     }
 
@@ -36,11 +41,23 @@
     padding-left: 4%;
 
     background: linear-gradient(to bottom, #ededed, #f6f6f6);
+    @media @tablet-size{
+        padding-left: 0;
+    }
+    @media @desktop-size{
+        padding-left: 0;
+    }
 
 }
 
 .filters__control-container {
     padding-left: 4%;
+
+    @media @tablet-size{
+        width: 83%;
+        margin: 0 auto;
+        padding-left: 0;
+    }
 
     @media @desktop-size {
         padding-left: 0;
