@@ -5,7 +5,6 @@ $(document).ready(function () {
     var nav = document.querySelector(".main-nav");
     var navClose = document.querySelector(".main-nav__close");
 
-
     cake.addEventListener("click", function(event){
         event.preventDefault();
         if (cake.classList.contains('main-menu--cake')){
@@ -21,11 +20,6 @@ $(document).ready(function () {
         }
     });
 
-    // navClose.addEventListener("click", function(event){
-    //     event.preventDefault();
-    //     nav.classList.add('main-nav--hide');
-    //     line.classList.remove("main-header--hide");
-    // })
 });
 
 
