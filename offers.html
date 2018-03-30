@@ -114,11 +114,20 @@
             <li class="sort__deal"><span>Тип сделки</span></li>
             <li class="sort__price"><span class="sort--arrow-down">Цена</span></li>
         </ul>
+        <form action="" class="sort__form" method="post">
+            <select name="sort-select" id="" class="sort__select">
+                <option value="sort__object-option">Тип объекта</option>
+                <option value="sort__adress-option">Адрес</option>
+                <option value="sort__deal-option">Тип сделки</option>
+                <option value="sort__price-option">Цена</option>
+            </select>
+        </form>
     </div>
 </section>
 
 <section class="offers">
     <div class="container_full">
+        <span class="offers__sort-by  sort__by-table">Сортировать по:</span>
         <table class="offers__table">
             <tbody>
             <tr>
@@ -160,8 +169,9 @@
                 </td>
                 <td class="offers__adress-value">
                     <span class="offers__col1  offers__adress">Адрес:</span>
-                    <span class="offers__col2  ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, voluptatibus!В.Новгород, Большая Санкт-Петербургская, 120 корп.3 <a href="#"
-                                                                                                        class="offers__map-link">На карте</a></span>
+                    <span class="offers__col2  ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, voluptatibus!В.Новгород, Большая Санкт-Петербургская, 120 корп.3 <a
+                        href="#"
+                        class="offers__map-link">На карте</a></span>
                 </td>
                 <td class="offers__dial-value"><span class="offers__col1  offers__dial">Тип сделки:</span><span
                     class="offers__col2  ">Аренда</span>

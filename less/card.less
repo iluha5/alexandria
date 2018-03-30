@@ -134,24 +134,32 @@
     height: 375px;
 
     overflow: hidden;
-    text-align: left;
+    text-align: center;
+    line-height:375px;
+
+    background: #d9d9d9;
 
     @media @tablet-size {
     }
     @media @desktop-size {
         height: 490px;
+        line-height:490px;
+
     }
 }
 
 .card__slider-img {
     position: relative;
+    display: inline-block;
+    vertical-align: middle;
     //display: block;
     width: auto;
-    height: 490px;
+    height: 375px;
     margin: 0 auto;
 
     @media @desktop-size {
         margin: 0;
+        height: 490px;
     }
 }
 
@@ -184,7 +192,7 @@
 .card__slider-list::before {
     position: absolute;
     z-index: 59;
-    top: 35%;
+    top: 40%;
     left: 10%;
 
     width: 72px;
@@ -196,21 +204,21 @@
     content: "";
 
     transform: rotate(315deg);
-    @media @tablet-size {
-        top: 35%;
-        left: 15%;
-    }
-    @media @desktop-size {
-        top: 35%;
-        left: 25%;
-        opacity: 1;
-    }
+    //@media @tablet-size {
+    //    top: 35%;
+    //    left: 15%;
+    //}
+    //@media @desktop-size {
+    //    top: 35%;
+    //    left: 25%;
+    //    opacity: 1;
+    //}
 }
 
 .card__slider-list::after {
     position: absolute;
     z-index: 59;
-    top: 35%;
+    top: 40%;
     //right: 36px;
     right: 10%;
 
@@ -223,15 +231,15 @@
     content: "";
 
     transform: rotate(135deg);
-    @media @tablet-size {
-        top: 35%;
-        right: 15%;
-    }
-    @media @desktop-size {
-        top: 35%;
-        right: 25%;
-        opacity: 1;
-    }
+    //@media @tablet-size {
+    //    top: 35%;
+    //    right: 15%;
+    //}
+    //@media @desktop-size {
+    //    top: 35%;
+    //    right: 25%;
+    //    opacity: 1;
+    //}
 
 }
 
@@ -239,7 +247,7 @@
     position: absolute;
     top: 0;
 
-    width: 20%;
+    width: 17%;
     border: 0;
 
     background: transparent;
@@ -250,12 +258,16 @@
     height: 100%;
     z-index: 99;
     @media @tablet-size {
-        width: 25%;
+        width: 17%;
     }
     @media @desktop-size {
-        width: 33%;
+        width: 30%;
     }
 
+}
+
+.slick-slide img{
+    display: inline-block;
 }
 
 .card__slider-list .slick-arrow:focus {
