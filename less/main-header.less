@@ -28,16 +28,20 @@
 
     text-align: center;
     @media print{
-        width: 320px;
-        height: 170px;
-        background: transparent url(../img/main-header__logo--print.png) center 0 no-repeat;
-        //content:url(../img/main-header__logo--print.png);
-        z-index: 99;
-
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
         color-adjust: exact !important;                 /*Firefox*/
+
+        //min-width: auto;
+        width: 282px;
+        height: 170px;
+        //background: transparent url(../img/main-header__logo--print.png) 0 0 no-repeat;
+        background-image: url(../img/main-header__logo--print.png) !important;
+        background-repeat: no-repeat;
+        //content:url(../img/main-header__logo--print.png);
+        z-index: 99;
+        //border: 1px solid #000;
     }
 
 }
