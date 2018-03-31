@@ -344,12 +344,10 @@
     &::before {
         position: absolute;
 
-        //display: inline-block;
         margin: 0;
         right: 0px;
         bottom: 12px;
 
-        //padding:4px 10px 6px 10px;
         padding: 0;
         width: 33px;
         height: 33px;
@@ -362,7 +360,6 @@
         vertical-align: bottom;
         font-family: "ALS Rubl", Arial, sans-serif;
 
-        //background: @blue url("../img/rub.svg") no-repeat center;
         background: @blue url(../img/rub.svg) 10px 6px no-repeat;
         color: @white;
 
@@ -370,6 +367,39 @@
 
     }
 
+    @media print{
+        &::before {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+            color-adjust: exact !important;                 /*Firefox*/
+
+            position: absolute;
+
+            margin: 0;
+            right: 0px;
+            bottom: 12px;
+
+            padding: 0;
+            width: 33px;
+            height: 33px;
+
+            border-radius: 33px;
+            border: 0;
+
+            font-size: 24px;
+            line-height: 33px;
+            vertical-align: bottom;
+            font-family: "ALS Rubl", Arial, sans-serif;
+
+            background: @blue url(../img/rub.svg) 10px 6px no-repeat;
+            color: @white;
+
+            content: '';
+
+        }
+
+    }
 }
 
 .card__but {
@@ -381,7 +411,11 @@
     //padding:10px 132px;
     //margin:20px;
 }
-
+.card__but-request{
+    @media print{
+        display: none;
+    }
+}
 .card__descript {
     width: 100%;
     padding-top: 25px;

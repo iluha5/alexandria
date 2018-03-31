@@ -13,9 +13,11 @@
         height: 323px;
         background: @gray url(../img/header__bg-desktop.jpg) 0 0 no-repeat;
     }
+    @media print{
+        box-shadow: none;
+    }
     box-shadow: inset 0px 141px 300px -48px rgba(0,0,0,0.75);
 
-    //.clearfix();
 }
 
 .main-header__logo{
@@ -25,7 +27,18 @@
     min-width:320px;
 
     text-align: center;
-    //.outline(red);
+    @media print{
+        width: 320px;
+        height: 170px;
+        background: transparent url(../img/main-header__logo--print.png) center 0 no-repeat;
+        //content:url(../img/main-header__logo--print.png);
+        z-index: 99;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+        color-adjust: exact !important;                 /*Firefox*/
+    }
 
 }
 .main-header__logo img{
@@ -33,6 +46,9 @@
     height:auto;
     @media @desktop-size{
         width: 282px;
+    }
+    @media print{
+        display: none;
     }
 }
 .main-header__phone{
@@ -59,6 +75,9 @@
         padding-top:40px;
 
         font-size: 24px;
+    }
+    @media print{
+        color: #000;
     }
 
 }
@@ -90,13 +109,13 @@
             padding-right:0;
 
     }
+    @media print{
+        display: none;
+    }
 
 
 }
 .main-header__main-menu{
-    //position: absolute;
-    //left:0;
-    //top:0;
     height:50px;
 
     @media @tablet-size{
@@ -104,15 +123,15 @@
         left: auto;
         top: auto;
         padding-left: 3%;
-        //padding-top: 38px;
-        //padding-right: 42px;
         width: 88%;
         margin: 0 auto;
     }
     @media @desktop-size{
         width: 65%;
     }
-    //.outline(green);
+    @media print{
+        display: none;
+    }
 
 }
 .main-header__social{
@@ -143,9 +162,10 @@
 
         text-align: right;
     }
+    @media print{
+        display: none;
+    }
 
-
-    //.outline(red);
 }
 
 @media @tablet-size {
@@ -154,18 +174,7 @@
         padding-left:48px;
         width:26%;
         min-width:180px;
-        //.outline(red);
     }
-
-
-    //.main-header__main-menu{
-    //    float: right;
-    //    width: 100%;
-    //
-    //    text-align: center;
-    //    //.outline(red);
-    //}
-
 }
 @media @desktop-size {
     .main-header__logo {
@@ -177,18 +186,8 @@
         width:46%;
 
         padding-right:0;
-        //.outline(red);
     }
-    //.main-header__request{
-    //    width:18%;
-    //    min-width:auto;
-    //    padding-right:0;
-    //    //.outline(blue);
-    //
-    //}
     .main-header__main-menu{
         float: right;
-        //width:74%;
-        //.outline(green);
     }
 }

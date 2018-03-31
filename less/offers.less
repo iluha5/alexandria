@@ -1,29 +1,30 @@
-.offers{
+.offers {
     position: relative;
-    font-size:0;
+    font-size: 0;
 
     color: @black;
 }
+
 //.offers > .container-full{
 //    position: relative;
 //}
 
 ////////////// TABLE ///////////////////
-.offers__sort-by{
+.offers__sort-by {
     position: absolute;
-    top:24px;
-    left:0;
+    top: 24px;
+    left: 0;
 
     z-index: 99;
-    @media @tablet-size{
+    @media @tablet-size {
         top: 21px;
     }
 }
 
-.offers__table{
+.offers__table {
     display: block;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     //border: 1px solid #000;
     //@media @tablet-size{
     //    width: 83%;
@@ -34,23 +35,25 @@
     //    max-width: 1170px;
     //}
 }
-.offers__table tbody{
+
+.offers__table tbody {
     display: block;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-.offers__table td{
+
+.offers__table td {
     display: block;
-    padding:0;
-    font-size:0;
-    line-height:43px;
-    padding-bottom:4px;
+    padding: 0;
+    font-size: 0;
+    line-height: 43px;
+    padding-bottom: 4px;
     text-align: left;
     vertical-align: top;
     //.outline(green);
     //border: 1px solid #000;
 
-    @media @desktop-size{
+    @media @desktop-size {
         display: inline-block;
         line-height: normal;
         padding-top: 25px;
@@ -60,21 +63,21 @@
 
 }
 
-.offers__table tr{
+.offers__table tr {
     position: relative;
     display: block;
-    margin:0;
-    padding-right:0;
-    padding-left:4%;
-    padding-top:24px;
-    padding-bottom:16px;
+    margin: 0;
+    padding-right: 0;
+    padding-left: 4%;
+    padding-top: 24px;
+    padding-bottom: 16px;
 
     border-bottom: 1px solid #ececec;
 
     //&:first-child{
     //    border-bottom: 2px solid #1b35a4;
     //}
-    @media @tablet-size{
+    @media @tablet-size {
         width: 83%;
 
         margin: 0 auto;
@@ -83,32 +86,31 @@
         padding-bottom: 12px;
         //.outline(red);
     }
-    @media @desktop-size{
+    @media @desktop-size {
         padding: 0;
         width: 92%;
         max-width: 1170px;
 
     }
 
-
-
 }
 
-.offers__item{
-    &:nth-child(even){
+.offers__item {
+    &:nth-child(even) {
         background: @white-footer;
     }
 }
-.offers__item ul{
-    margin:0;
-    padding-right:0;
-    padding-left:4%;
-    padding-top:24px;
-    padding-bottom:16px;
+
+.offers__item ul {
+    margin: 0;
+    padding-right: 0;
+    padding-left: 4%;
+    padding-top: 24px;
+    padding-bottom: 16px;
 
     list-style: none;
 
-    @media @tablet-size{
+    @media @tablet-size {
         width: 83%;
 
         margin: 0 auto;
@@ -117,7 +119,7 @@
         padding-bottom: 12px;
         //.outline(red);
     }
-    @media @desktop-size{
+    @media @desktop-size {
         padding: 0;
         width: 92%;
         max-width: 1170px;
@@ -125,17 +127,15 @@
 
 }
 
-
-
-.offers__item li{
+.offers__item li {
     display: block;
-    font-size:0;
-    line-height:43px;
-    padding-bottom:4px;
+    font-size: 0;
+    line-height: 43px;
+    padding-bottom: 4px;
     text-align: left;
     vertical-align: top;
 
-    @media @desktop-size{
+    @media @desktop-size {
         display: inline-block;
         line-height: normal;
         padding-top: 25px;
@@ -144,99 +144,122 @@
     }
 }
 
-
-.offers__col1{
+.offers__col1 {
     display: inline-block;
     vertical-align: top;
-    width:39%;
+    width: 39%;
 
-    font-family:"Geometria Medium",Arial,sans-serif;
-    font-size:16px;
-    line-height:normal;
+    font-family: "Geometria Medium", Arial, sans-serif;
+    font-size: 16px;
+    line-height: normal;
 
     color: @black;
 
-    @media @tablet-size{
+    @media @tablet-size {
         width: 29%;
     }
 
-    @media @desktop-size{
+    @media @desktop-size {
         display: none;
     }
 }
-.offers__col2{
+
+.offers__col2 {
     display: inline-block;
     vertical-align: top;
-    width:61%;
+    width: 61%;
 
-    font-family:"Geometria Regular",Arial,sans-serif;
-    font-size:16px;
-    line-height:normal;
+    font-family: "Geometria Regular", Arial, sans-serif;
+    font-size: 16px;
+    line-height: normal;
 
     color: @black;
 
-    @media @tablet-size{
+    @media @tablet-size {
         width: 71%;
     }
 
-    @media @desktop-size{
+    @media @desktop-size {
         width: 100%;
         //vertical-align: middle;
     }
 }
-.offers__more{
-    display: inline-block;
-    padding:0px 16px;
-    width:auto;
 
-    font-family:"Geometria Medium",Arial,sans-serif;
-    font-size:16px;
+.offers__more {
+    display: inline-block;
+    padding: 0px 16px;
+    width: auto;
+
+    font-family: "Geometria Medium", Arial, sans-serif;
+    font-size: 16px;
     text-decoration: none;
     vertical-align: top;
-    line-height:34px;
+    line-height: 34px;
+        @media print{
+            display: none;
+        }
 
 }
-.offers__type-value{
-    @media @desktop-size{
+
+.offers__type-value {
+    @media @desktop-size {
         width: 19%;
     }
 }
-.offers__adress-value{
-    @media @desktop-size{
+
+.offers__adress-value {
+    @media @desktop-size {
         width: 44%;
     }
 
 }
-.offers__dial-value{
-    @media @desktop-size{
+
+.offers__dial-value {
+    @media @desktop-size {
         width: 13%;
     }
 
 }
-.offers__price-value{
-    @media @desktop-size{
+
+.offers__price-value {
+    @media @desktop-size {
         width: 12%;
     }
 
 }
-.offers__item li.offers__but-more{
-    @media @desktop-size{
-        width: 12%;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        //.outline(red);
-    }
 
+.offers__table td.offers__but-more {
+    @media @desktop-size {
+        width: 12%;
+    }
+    @media print {
+        display: none;
+        line-height: 0px;
+    }
 }
-.offers__map-link{
+
+//.offers__item li.offers__but-more{
+//    @media @desktop-size{
+//        width: 12%;
+//        padding-top: 20px;
+//        padding-bottom: 20px;
+//        //.outline(red);
+//    }
+//    @media print{
+//        display: none;
+//    }
+//
+//
+//}
+.offers__map-link {
     display: none;
 
-    font-family:"Geometria Regular",Arial,sans-serif;
-    font-size:14px;
+    font-family: "Geometria Regular", Arial, sans-serif;
+    font-size: 14px;
     text-decoration: underline;
 
     color: @gray3;
-    @media @desktop-size{
+    @media @desktop-size {
         display: block;
     }
 }
