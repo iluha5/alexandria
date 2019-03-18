@@ -1,9 +1,9 @@
-////////////////////// ПОДКЛЮЧАЕМ ПЛАГИНЫ ////////////////////////////
+////////////////////// Plugins ////////////////////////////
 
-var gulp = require('gulp'); // Подключаем Gulp
-var less = require('gulp-less'); //Подключаем less пакет,
-var browserSync = require('browser-sync'); // Подключаем Browser Sync
-var server = require("browser-sync").create(); // подключаем еще один browser-sync
+var gulp = require('gulp'); // Gulp
+var less = require('gulp-less'); //less packages,
+var browserSync = require('browser-sync'); // Browser Sync
+var server = require("browser-sync").create(); // browser-sync
 var path = require('path');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
@@ -17,38 +17,13 @@ var svgstore = require("gulp-svgstore");
 var run = require('run-sequence');
 var del = require('del');
 
-/////////////////////////// Не рабочие варианты ///////////////////////////////
 
-// gulp.task('less', ['less3'], function () { // Создаем таск less
-//     return gulp.src('less/style.less') // Берем источник
-//     //        .pipe(less([ path.join(__dirname, 'less', 'includes') ])) // Преобразуем less в CSS посредством gulp-less
-//     //        .pipe(gulp.dest('css')) // Выгружаем результата в папку css
-//         .pipe(browserSync.reload({stream: true})); // Обновляем CSS на странице при изменении
-// });
-//
-// gulp.task('browser-sync', function () { // Создаем таск browser-sync
-//     browserSync({ // Выполняем browserSync
-//         server: { // Определяем параметры сервера
-//             baseDir: '.' // Директория для сервера - .
-//         },
-//         notify: false // Отключаем уведомления
-//     });
-// });
-//
-// gulp.task('watch', ['less', 'browser-sync'], function () {
-//     gulp.watch('less/**/*.less', ['less']); // Наблюдение за less файлами
-//     // Наблюдение за другими типами файлов
-// });
-///////////////////////////////////////////////////////////////////
-
-
-
-///////// РАБОТА С CSS /////////////////////////////
+///////// Working with CSS /////////////////////////////
 
 gulp.task('less3', function () {
     return gulp.src('less/style.less')
         .pipe(plumber())
-        .pipe(less([path.join(__dirname, 'less')])) // Преобразуем less в CSS посредством gulp-less
+        .pipe(less([path.join(__dirname, 'less')])) // Convert less в CSS with gulp-less
         .pipe(postcss([
             autoprefixer({
                 browsers: [
@@ -58,12 +33,12 @@ gulp.task('less3', function () {
                     "last 2 Opera versions",
                     "last 2 Edge versions"
                 ]
-            }), // добавляем префиксы для указанных версий браузеров
+            }), // prefixes for browsers versions
             mqpacker({
                 sort: true
-            }) // объединяем медиавыражения
+            }) // unite media queryes
         ]))
-        .pipe(gulp.dest('build/css')) // Выгружаем результата в папку css
+        .pipe(gulp.dest('build/css')) // upload results to css folder
         .pipe(minify())
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('build/css'));
@@ -72,7 +47,7 @@ gulp.task('less3', function () {
 
 //////////////////////////////////////////////////
 
-///////// ОПТИМИЗИРУЕМ JPG И PNG //////////////////
+///////// Optimizing JPG and PNG //////////////////
 
 gulp.task("images", function () {
     return  gulp.src("build/img/**/*.{png,jpg,gif}")
@@ -85,7 +60,7 @@ gulp.task("images", function () {
 });
 /////////////////////////////////////////////////////
 
-/////////////// СБОРКА SVG СПРАЙТА ДЛЯ INLINE /////////////////
+/////////////// Building SVG sprites for INLINE /////////////////
 
 gulp.task('symbols', function () {
    return gulp.src('build/img/*.svg')
@@ -99,7 +74,7 @@ gulp.task('symbols', function () {
 
 //////////////////////////////////////////////////////
 
-//////////////////// ВОТЧЕРЫ И СИНХРОНИЗАЦИЯ С БРАУЗЕРОМ ////////////////////
+//////////////////// watchers and sync with browser ////////////////////
 // еще одна функция для browser-sync :)
 
 // gulp.task("serve", ["less3"], function () {
@@ -113,7 +88,7 @@ gulp.task('symbols', function () {
 
 ////////////////////////////////////////////////////////////////////////////
 
-////////////////////// КОПИРУЕМ ФАЙЛЫ В ПАПКУ BUILD /////////////////////////
+////////////////////// Copying to BUILD /////////////////////////
 
 gulp.task('copy', function () {
    return gulp.src([
@@ -128,12 +103,12 @@ gulp.task('copy', function () {
 });
 ///////////////////////////////////////////////////////////////////////////
 
-////////////////// УДАЛЕНИЕ //////////////////////////////////////////
+////////////////// Removing //////////////////////////////////////////
 gulp.task('clean', function () {
    return del('build');
 });
 
-////////////////////  СОБИРАЕМ БИЛД В ОТДЕЛЬНУЮ ПАПКУ //////////////////////
+////////////////////  Upload build to build folder //////////////////////
 
 gulp.task('build', function (fn){
    run(
@@ -147,7 +122,7 @@ gulp.task('build', function (fn){
 
 ///////////////////////////////////////////////////////////////////////////
 
-/////////////// TЩЕ ОДИН ВОТЧЕР //////////////////////////
+/////////////// One more watcher //////////////////////////
 
 gulp.task("style1", function() {
     gulp.src("less/style.less")
